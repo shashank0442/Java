@@ -1,6 +1,6 @@
 package oops.encapsulation;
 
-public class Test {
+public class TestEncapsulation {
 
     public static void main(String[] args) {
         Encapsulation obj = new Encapsulation();

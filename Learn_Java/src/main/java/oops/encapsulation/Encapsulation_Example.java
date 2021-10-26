@@ -1,4 +1,4 @@
-package extraprograms;
+package oops.encapsulation;
 
 public class Encapsulation_Example {
     // How to implement setters for implementing encapsulation

@@ -8,12 +8,12 @@ public class fabonacci {
         int second = 1;
         int value;
 
-        System.out.print(first+", "+second+", ");
-        for(int i=0;i<10;i++){
-            value= first+second;
-            System.out.print(value+" , ");
-            first=second;
-            second=value;
+        System.out.print(first + ", " + second + ", ");
+        for (int i = 0; i < 10; i++) {
+            value = first + second;
+            System.out.print(value + " , ");
+            first = second;
+            second = value;
         }
     }
 }

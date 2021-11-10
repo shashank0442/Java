@@ -4,11 +4,11 @@ package extraprograms;
 
 public class CharCountFromString {
 
-    public static void getCharacterCount(String str){
+    public static void getCharacterCount(String str) {
         int count = 0;
         char currentCharacter;
-        String oldCharacters="";
-        boolean isUniqueCharacter=false;
+        String oldCharacters = "";
+        boolean isUniqueCharacter = false;
         for (int i = 0; i < str.length(); i++) {
             currentCharacter = str.charAt(i);
             for (int j = 0; j < str.length(); j++) {
@@ -17,13 +17,15 @@ public class CharCountFromString {
                     count++;
                 }
             }
-            if(isUniqueCharacter){
-            System.out.println("character value = " + currentCharacter + " Occourance  = " + count);
-            oldCharacters = oldCharacters+Character.toString(currentCharacter);
-            count = 0;}
+            if (isUniqueCharacter) {
+                System.out.println("character value = " + currentCharacter + " Occourance  = " + count);
+                oldCharacters = oldCharacters + Character.toString(currentCharacter);
+                count = 0;
+            }
         }
     }
+
     public static void main(String[] args) {
-       getCharacterCount("Looooooooooovee");
+        getCharacterCount("Looooooooooovee");
     }
 }

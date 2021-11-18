@@ -26,6 +26,6 @@ public class CharCountFromString {
     }
 
     public static void main(String[] args) {
-        getCharacterCount("Looooooooooovee");
+        getCharacterCount("Looooloooooovee");
     }
 }

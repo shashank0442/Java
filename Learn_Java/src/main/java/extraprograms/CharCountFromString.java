@@ -2,6 +2,9 @@ package extraprograms;
 
 //Capgimini Question : = Write a program which give count of all the unique character occurrence in the given string
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CharCountFromString {
 
     public static void getCharacterCount(String str) {
@@ -25,7 +28,28 @@ public class CharCountFromString {
         }
     }
 
+    public static void getCharacterCountUsingMap(String str) {
+        int count = 0;
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < str.length(); i++) {
+            String currentChar = Character.toString(str.charAt(i));
+            for (int j = 0; j < str.length(); j++) {
+                if (currentChar.contains(Character.toString(str.charAt(j)))) {
+                    count++;
+                }
+            }
+            map.put(currentChar, count);
+            count = 0;
+        }
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println("Value = " + entry.getValue() + "\t Count= " + entry.getKey());
+        }
+    }
+
     public static void main(String[] args) {
-        getCharacterCount("Looooloooooovee");
+        String str = "Shashank";
+        getCharacterCount(str);
+        System.out.println("*******************************************");
+        getCharacterCountUsingMap(str);
     }
 }

@@ -23,7 +23,7 @@ public class FindingCommonAndUncommonIntegersInArray {
         }
         System.out.println("Reading list value below");
         for (int val : list) {
-            System.out.print(val + " , ");
+            System.out.print(val + "  ");
         }
     }
 

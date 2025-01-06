@@ -7,8 +7,6 @@ import java.util.Collections;
 import java.util.Date;
 
 public class DateSorting {
-
-
     public static void main(String[] args) throws ParseException {
         ArrayList<Date> dates = new ArrayList<>();
         Date tempDate;

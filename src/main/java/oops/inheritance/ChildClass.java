@@ -8,6 +8,7 @@ public class ChildClass extends ParentClass {
         pObj.talk();
         pObj.walk();
         pObj.wish();
+        //pObj.laugh(); // this is private method can't be used outside of the class
 
         // Here we can not inherit private member function
 

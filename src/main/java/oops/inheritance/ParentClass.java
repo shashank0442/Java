@@ -2,19 +2,27 @@ package oops.inheritance;
 
 public class ParentClass {
 
-    public void walk() {
-        System.out.println("Your Parents are walking");
+    private void laugh() {
+        System.out.println("Private: The most restrictive access level. " +
+                "Members declared as private are only accessible within the same class.");
     }
 
     void talk() {
-        System.out.println("Your Parents are talking");
+        System.out.println("default (no modifier): When no access modifier is specified, " +
+                "it is considered default access. " +
+                "Members with default access are accessible within the same package, " +
+                "but not from outside the package.");
     }
 
-    protected void wish() {
-        System.out.println("Your Parents are washing happy life");
+    protected void walk() {
+        System.out.println("protected: Members declared as protected are accessible within " +
+                "the same package and by subclasses, even if the subclasses are in a different package.");
     }
 
-    private void laugh() {
-        System.out.println("Your Parents are talking");
+    public void wish() {
+        System.out.println("public: The least restrictive access level. " +
+                "Members declared as public are accessible from any other class, regardless of the package.");
     }
+
+
 }

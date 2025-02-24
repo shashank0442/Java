@@ -46,5 +46,45 @@ public class FindingCommonAndUncommonIntegersInArray {
     public static void main(String[] args) {
         findingCommonInteger(arr, arr1);
         findingUncommonInteger(arr, arr1);
+
+        // Below implementation using Set
+        Set<Integer> commonSet = new HashSet<Integer>();
+        Set<Integer> uncommonSet = new HashSet<Integer>();
+
+        Set<Integer> set1 = new HashSet<>();
+        Set<Integer> set2 = new HashSet<>();
+
+        for (int a : arr) {
+            set1.add(a);
+        }
+
+        for (int b : arr1) {
+            set2.add(b);
+        }
+
+        for (int value : set1) {
+            if (set2.contains(value)) {
+                commonSet.add(value);
+            } else {
+                uncommonSet.add(value);
+            }
+        }
+
+        for (int value : set2) {
+            if (!set1.contains(value)) {
+                uncommonSet.add(value);
+            }
+        }
+
+        System.out.println("Common values are = ");
+        for (int i : commonSet) {
+            System.out.print(i + " ");
+        }
+
+        System.out.println("\n Uncommon values are = ");
+        for (int j : uncommonSet) {
+            System.out.print(j + " ");
+        }
+
     }
 }
